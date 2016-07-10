@@ -1,0 +1,6 @@
+.idea/
+*.iml
+hooks/
+node_modules/
+platforms/
+.DS_Store
