@@ -1,7 +1,11 @@
 import {Component} from "@angular/core";
+import {Tab1Page} from "../tabs/tab1/tab1.component";
+import {Tab2Page} from "../tabs/tab2/tab2.component";
+import {Tab3Page} from "../tabs/tab3/tab3.component";
 
 @Component({
     selector: "home-page",
+    directives: [Tab1Page, Tab2Page, Tab3Page],
     templateUrl: "components/home/home.html",
     styleUrls: ["components/home/home-common.css", "components/home/home.css"]
 })

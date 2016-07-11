@@ -1,0 +1,11 @@
+<StackLayout>
+    <ListView [items]="items">
+        <template let-item="item">
+            <!--<list-item-component [item]="item"></list-item-component>-->
+
+            <StackLayout [class.odd]="odd" [class.even]="even">
+                <Label [text]="item.title" textWrap="true" (tap)="onBooTap($event, item)"></Label>
+            </StackLayout>
+        </template>
+    </ListView>
+</StackLayout>
