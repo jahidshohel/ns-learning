@@ -4,3 +4,6 @@ hooks/
 node_modules/
 platforms/
 .DS_Store
+app/**/*.js
+app/**/*.js.map
+lib/
