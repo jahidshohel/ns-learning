@@ -1,26 +1,12 @@
-<!--<ActionBar title="NS Learning" android:position="right">-->
-    <!--<ActionItem text="action" android.position="left"></ActionItem>-->
-    <!--<ActionItem ios.systemIcon="9" android.systemIcon="ic_menu_share_holo_light"></ActionItem>-->
-<!--</ActionBar>-->
-
-<!--<GridLayout rows="auto, *">-->
-    <!--<SegmentedBar #tabs [items]="items" (selectedIndexChanged)="selectedIndex=$event.newIndex" row="0"></SegmentedBar>-->
-
-    <!--<GridLayout row="1">-->
-        <!--<tab1 *ngIf="selectedIndex==0"></tab1>-->
-        <!--<tab2 *ngIf="selectedIndex==1"></tab2>-->
-        <!--<tab3 *ngIf="selectedIndex==2"></tab3>-->
-    <!--</GridLayout>-->
-    <!--&lt;!&ndash;<Label text="hello worldddd booo1234 {{selectedIndex}}" visibility="{{ selectedIndex === 0 ? 'visible' : 'collapsed'}}" row="1"></Label>&ndash;&gt;-->
-
-<!--</GridLayout>-->
+<ActionBar title="NS Learning" android:position="right">
+    <ActionItem text="action" android.position="left"></ActionItem>
+    <ActionItem ios.systemIcon="9" android.systemIcon="ic_menu_share_holo_light"></ActionItem>
+</ActionBar>
 
 <StackLayout>
-    <SegmentedBar [(ngModel)]="selectedIndex">
-        <SegmentedBarItem title="Strawberry"></SegmentedBarItem>
-        <SegmentedBarItem title="Blueberry"></SegmentedBarItem>
-        <SegmentedBarItem title="Raspberry"></SegmentedBarItem>
-    </SegmentedBar>
+    <SegmentedBar #tabs [items]="items" [(ngModel)]="selectedIndex"></SegmentedBar>
+
+
     <StackLayout *ngIf="selectedIndex === 0">
         <tab1></tab1>
     </StackLayout>
