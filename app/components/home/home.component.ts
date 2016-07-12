@@ -18,6 +18,5 @@ export class HomePage {
     ];
 
     constructor() {
-        this.selectedIndex = 0;
     }
 }

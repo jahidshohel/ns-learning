@@ -1,21 +1,33 @@
-<!--<ActionBar title="test" icon="res://icon" android.iconVisibility="always">-->
-<!--<NavigationButton text="Go Back" android.systemIcon="ic_menu_back"></NavigationButton>-->
-<!--<ActionItem android.systemIcon="ic_menu_edit" ios.position="right"></ActionItem>-->
+<!--<ActionBar title="NS Learning" android:position="right">-->
+    <!--<ActionItem text="action" android.position="left"></ActionItem>-->
+    <!--<ActionItem ios.systemIcon="9" android.systemIcon="ic_menu_share_holo_light"></ActionItem>-->
 <!--</ActionBar>-->
 
-<!--<ActionBar title="Custom Title" android:position="right">-->
-<!--<ActionItem text="action" android.position="left"></ActionItem>-->
-<!--<ActionItem ios.systemIcon="9" android.systemIcon="ic_menu_share_holo_light" ></ActionItem>-->
-<!--</ActionBar>-->
+<!--<GridLayout rows="auto, *">-->
+    <!--<SegmentedBar #tabs [items]="items" (selectedIndexChanged)="selectedIndex=$event.newIndex" row="0"></SegmentedBar>-->
 
-<GridLayout rows="auto, *">
-    <SegmentedBar #tabs [items]="items" (selectedIndexChanged)="selectedIndex=$event.newIndex" row="0"></SegmentedBar>
+    <!--<GridLayout row="1">-->
+        <!--<tab1 *ngIf="selectedIndex==0"></tab1>-->
+        <!--<tab2 *ngIf="selectedIndex==1"></tab2>-->
+        <!--<tab3 *ngIf="selectedIndex==2"></tab3>-->
+    <!--</GridLayout>-->
+    <!--&lt;!&ndash;<Label text="hello worldddd booo1234 {{selectedIndex}}" visibility="{{ selectedIndex === 0 ? 'visible' : 'collapsed'}}" row="1"></Label>&ndash;&gt;-->
 
-    <GridLayout row="1">
-        <tab1 *ngIf="selectedIndex==0"></tab1>
-        <tab2 *ngIf="selectedIndex==1"></tab2>
-        <tab3 *ngIf="selectedIndex==2"></tab3>
-    </GridLayout>
-    <!--<Label text="hello worldddd booo1234 {{selectedIndex}}" visibility="{{ selectedIndex === 0 ? 'visible' : 'collapsed'}}" row="1"></Label>-->
+<!--</GridLayout>-->
 
-</GridLayout>
+<StackLayout>
+    <SegmentedBar [(ngModel)]="selectedIndex">
+        <SegmentedBarItem title="Strawberry"></SegmentedBarItem>
+        <SegmentedBarItem title="Blueberry"></SegmentedBarItem>
+        <SegmentedBarItem title="Raspberry"></SegmentedBarItem>
+    </SegmentedBar>
+    <StackLayout *ngIf="selectedIndex === 0">
+        <tab1></tab1>
+    </StackLayout>
+    <StackLayout *ngIf="selectedIndex === 1" width="100%">
+        <tab2></tab2>
+    </StackLayout>
+    <StackLayout *ngIf="selectedIndex === 2" width="100%">
+        <tab3></tab3>
+    </StackLayout>
+</StackLayout>
