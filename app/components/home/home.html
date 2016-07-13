@@ -6,7 +6,6 @@
 <StackLayout>
     <SegmentedBar #tabs [items]="items" [(ngModel)]="selectedIndex"></SegmentedBar>
 
-
     <StackLayout *ngIf="selectedIndex === 0">
         <tab1></tab1>
     </StackLayout>
