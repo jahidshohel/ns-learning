@@ -7,7 +7,7 @@ import {AuthGuard} from "./auth.guard";
 
 nativeScriptBootstrap(AppComponent,
     [
-        nsProvideRouter(Routes, {enableTracing: true}),
+        nsProvideRouter(Routes, {enableTracing: false}),
         AuthGuard
     ],
     {startPageActionBarHidden: false}
