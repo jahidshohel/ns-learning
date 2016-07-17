@@ -1,5 +1,5 @@
 <StackLayout>
-    <TextField id="firstName" autocorrect="false" hint="First Name" [(ngModel)]="firstName" autocapitalizationType="none"></TextField>
+    <TextField id="firstName" #firstNameTextField autocorrect="false" hint="First Name" [(ngModel)]="firstName" autocapitalizationType="none"></TextField>
     <TextField id="lastName" autocorrect="false" hint="Last Name" [(ngModel)]="lastName" autocapitalizationType="none"></TextField>
     <StackLayout orientation="horizontal">
         <Button text="Insert" (tap)="insert($event)" class="submit-button"></Button>

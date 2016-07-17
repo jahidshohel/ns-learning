@@ -1,4 +1,5 @@
-import {Component} from "@angular/core";
+import {Component, ElementRef, ViewChild} from "@angular/core";
+import {TextField} from "ui/text-field";
 
 @Component({
     selector: "tab2",
@@ -6,14 +7,23 @@ import {Component} from "@angular/core";
     styleUrls: ["components/tabs/tab2/tab2-common.css", "components/tabs/tab2/tab2.css"],
 })
 export class Tab2Page {
-    firstName:string="Jhon";
-    lastName:string="Doe";
+    firstName:string = "Jhon";
+    lastName:string = "Doe";
 
-    insert(e:any){
+    @ViewChild("firstNameTextField")
+    firstNameTextField:ElementRef;
+
+    constructor() {
+    }
+
+    insert(e:any) {
+        let fnTextField = <TextField>this.firstNameTextField.nativeElement;
+        fnTextField.focus();
+        //fnTextField.dismissSoftInput();
         console.log("insertttt");
     }
 
-    select(e:any){
+    select(e:any) {
         console.log("selecttt");
     }
 }
