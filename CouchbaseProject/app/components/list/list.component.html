@@ -1,0 +1,11 @@
+<ActionBar title="Person List">
+    <ActionButton text="Create" (tap)="create()" ios.position="right"></ActionButton>
+</ActionBar>
+
+<GridLayout>
+    <ListView [items]="personList">
+        <template let-item="item">
+            <Label [text]="item.firstname +' '+item.lastname"></Label>
+        </template>
+    </ListView>
+</GridLayout>

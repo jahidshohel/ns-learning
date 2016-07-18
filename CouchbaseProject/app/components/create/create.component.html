@@ -1,0 +1,11 @@
+<ActionBar title="Person Create">
+    <NavigationItem text="Back"></NavigationItem>
+    <ActionButton text="Save" (tap)="save()" ios.position="right"></ActionButton>
+</ActionBar>
+
+
+<StackLayout>
+    <TextField hint="First Name" [(ngModel)]="firstname"></TextField>
+    <TextField hint="Last Name" [(ngModel)]="lastname"></TextField>
+</StackLayout>
+
