@@ -4,7 +4,7 @@ import {CouchbaseInstance} from "../../couchbaseinstance";
 
 @Component({
     selector: "create",
-    templateUrl: "component/create/create.component.html"
+    templateUrl: "components/create/create.component.html"
 })
 
 export class CreateComponent {

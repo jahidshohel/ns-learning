@@ -5,7 +5,7 @@ import {CouchbaseInstance} from "../../couchbaseinstance";
 
 @Component({
     selector: "list",
-    templateUrl: "component/list/list.component.html"
+    templateUrl: "components/list/list.component.html"
 })
 
 export class ListComponent {
@@ -26,6 +26,7 @@ export class ListComponent {
             for (let i = 0; i < changes.length; i++) {
                 let documentId = changes[i].getDocumentId();
                 changeIndex = this.indexOfObjectId(documentId, this.personList);
+                let document = this.database.getDocument(documentId);
                 if (changeIndex == -1) {
                     this.ngZone.run(()=> {
                         this.personList.push(document);
@@ -46,7 +47,8 @@ export class ListComponent {
     }
 
     public create() {
-        this.router.navigate(["create"]);
+        console.log("boooooooooooo");
+        this.router.navigate(["/create"]);
     }
 
     private refresh() {
