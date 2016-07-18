@@ -2,6 +2,53 @@
     <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" (tap)="onBackTap()"></NavigationButton>
 </ActionBar>
 
-<GridLayout>
-    <Label text="Settings"></Label>
-</GridLayout>
+<!--<GridLayout>-->
+    <!--<Label text="Settings"></Label>-->
+<!--</GridLayout>-->
+
+
+<ScrollView>
+
+    <CardView class="innerCardStyle">
+
+        <StackLayout #container>
+
+
+            <Label class="label" text="Student's Name"></Label>
+
+            <TextField #studentname hint="Student's Name"
+                       autocorrect="false" autocapitalizationType="none" ></TextField>
+
+            <Label class="label" text="Number of Practices Required"></Label>
+
+            <Slider class="label" ></Slider>
+
+            <Label class="label" text="Length of Practices in Minutes"></Label>
+
+            <Slider class="label"></Slider>
+
+            <Label class="label" text="Reward for Practice Sequence Completion"></Label>
+
+            <TextField hint="Reward"
+                       autocorrect="false" autocapitalizationType="none"></TextField>
+
+            <Label class="label" text="Optional Password"></Label>
+
+            <TextField secure="true" hint="Admin Password"
+                       autocorrect="false" autocapitalizationType="none"></TextField>
+
+            <Label class="label" text="Optional Teacher Email"></Label>
+
+            <TextField hint="Teacher's Email Address" keyboardType="email"
+                       autocorrect="false" autocapitalizationType="none"></TextField>
+
+            <ListPicker #instrument [items]="instruments"></ListPicker>
+
+            <Button [text]="'Save'" class="submit-button white-text" ></Button>
+
+
+        </StackLayout>
+
+    </CardView>
+
+</ScrollView>
