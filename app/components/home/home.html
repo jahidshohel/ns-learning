@@ -3,16 +3,16 @@
     <ActionItem ios.systemIcon="9" android.systemIcon="ic_menu_share_holo_light"></ActionItem>
 </ActionBar>
 
-<StackLayout>
-    <SegmentedBar #tabs [items]="items" [(ngModel)]="selectedIndex"></SegmentedBar>
+<GridLayout rows="auto, *">
+    <SegmentedBar #tabs [items]="items" [(ngModel)]="selectedIndex" selectedBackgroundColor="#fac950"></SegmentedBar>
 
-    <StackLayout *ngIf="selectedIndex === 0">
+    <StackLayout row="1" *ngIf="selectedIndex === 0">
         <tab1></tab1>
     </StackLayout>
-    <StackLayout *ngIf="selectedIndex === 1" width="100%">
+    <StackLayout row="1" *ngIf="selectedIndex === 1" width="100%">
         <tab2></tab2>
     </StackLayout>
-    <StackLayout *ngIf="selectedIndex === 2" width="100%">
+    <StackLayout row="1" *ngIf="selectedIndex === 2" width="100%">
         <tab3></tab3>
     </StackLayout>
-</StackLayout>
+</GridLayout>
